@@ -1,0 +1,31 @@
+const config = {
+  url: `${process.env.REACT_APP_API_URL}`,
+  utm: '?utm_campaign=Szkolenia-marzec-2022&utm_medium=email&utm_source=Newsletter',
+  courseCode: [
+    { abr: 'RODO_INSP', pos: 7 },
+    { abr: 'RODO_UZUP', pos: 8 },
+    { abr: 'RODO_DPIA', pos: 9 },
+    { abr: 'INDW_AUDT', pos: 10 },
+    { abr: 'OINW_KTJN', pos: 2 },
+    { abr: 'OINW_UZUP', pos: 3 },
+    { abr: 'OINW_KTMN', pos: 4 },
+    { abr: 'SOIN_SOIN', pos: 5 },
+    { abr: 'SOIN_UZUP', pos: 6 },
+    { abr: 'BTIN_BTIN', pos: 11 },
+    { abr: 'CBZP_CHGN', pos: 12 },
+    { abr: 'OBRN_OBRN', pos: 13 },
+    { abr: 'ZKOC_ZKOC', pos: 14 },
+    { abr: 'BZPO_BZPO', pos: 15 },
+    { abr: 'OCHR_OCHR', pos: 16 },
+    { abr: 'ARCH_PDST', pos: 17 },
+    { abr: 'ARCH_UZUP', pos: 18 },
+    { abr: 'INDW_TJMP', pos: 19 },
+    { abr: 'INDW_BTIN', pos: 20 },
+    { abr: 'INDW_OINW', pos: 21 },
+    { abr: 'INDW_CHGN', pos: 22 },
+    { abr: 'INDW_KNSL', pos: 23 },
+    { abr: 'OINW_FORM', pos: 24 },
+  ],
+};
+
+export default config;

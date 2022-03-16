@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import useFetchData from './utils/useFetchData';
+import Error from './components/Error';
+import Loader from './components/Loader';
+import Content from './components/Content';
+import Layout from './templates/layout';
+import config from './utils/data';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const { results, isLoading, error } = useFetchData(config);
+
+  if (error) {
+    return (
+      <Layout>
+        <Error error={error} />
+      </Layout>
+    );
+  }
+  return isLoading ? (
+    <Layout>
+      <Loader />
+    </Layout>
+  ) : (
+    <Layout>
+      <Content results={results} utm={config.utm} />
+    </Layout>
   );
 }
 
